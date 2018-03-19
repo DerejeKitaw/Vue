@@ -46,3 +46,67 @@ export default new Router({
 ```
 ### Add routs
 ```
+{
+            path: '/friends/:id/:age/:weight',
+            name: 'Friends',
+            component: Friends
+        },
+```
+Accss param value in friends component
+```js
+<template>
+<div>
+  <h1>Freinds</h1>
+  {{$route.params.id}}
+  {{$route.params.age}}
+  {{$route.params.weight}}
+  </div>
+</template>
+```
+validate params using props
+```js
+<template>
+<div>
+  <h1>Freinds</h1>
+  {{$route.params.id}}
+  {{$route.params.age}}
+  {{$route.params.weight}}
+  </div>
+</template>
+
+<script>
+export default {
+props:[
+  'id',
+  'age',
+  'weight'
+]
+}
+</script>
+<!-- scopped limit the style from being global -->
+<style scoped>
+h1 {
+    color: red;
+}
+</style>
+```
+in router/index.js
+```js
+        {
+            path: '/friends/:id/:age/:weight',
+            name: 'Friends',
+            props:true,
+            component: Friends
+        },
+```
+So now params are passed as props so
+```html
+<template>
+    <div>
+        <h1>Freinds</h1>
+        {{id}}
+        {{age}}
+        {{weight}}
+  </div>
+</template>
+```

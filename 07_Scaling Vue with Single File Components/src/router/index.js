@@ -15,8 +15,9 @@ export default new Router({
             component: HelloWorld
         },
         {
-            path: '/friends',
+            path: '/friends/:id/:age/:weight',
             name: 'Friends',
+            props:true,
             component: Friends
         },
         {
