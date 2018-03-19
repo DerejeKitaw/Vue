@@ -29,3 +29,7 @@ open
 http://localhost:8080
 ```
 ### install vue extention "vetur"
+
+### Add new component
+```
+```
