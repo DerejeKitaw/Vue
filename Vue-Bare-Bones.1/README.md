@@ -13,7 +13,7 @@
 </body>
 </html>
 ```
-### add id for the div tag to reference it with vue
+### add id for the dive tag to reference it with vue
 ```html
 <div id="app">
 ```
