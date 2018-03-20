@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <HelloWorld/>
+    <router-link to="friends">Friend</router-link>
+    <router-link to="account">Account</router-link>
+    <router-link to="contact">Contact</router-link>
+    <router-view />
   </div>
 </template>
 

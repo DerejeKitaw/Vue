@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app-9">
+        <div>App 9</div>
+        <input v-model="msg">
+        <div>Message: {{ msg }}</div>
+        <div v-once>This will never change: {{ msg }}</div>
+    </div>
+    <hr>
+    <div id="app-10">
+        <div>App 10</div>
+        <p>Using mustaches: {{ rawHtml }}</p>
+        <p>Using v-html directive:
+            <span v-html="rawHtml"></span>
+        </p>
+    </div>
+    <hr>
+    <div id="app-11">
+        <div>App 11</div>
+        <div v-bind:id="dynamicId"></div>
+        <button v-bind:disabled="isButtonDisabled">Button</button>
+    </div>
+    <hr>
+    <div id="app-12">
+        <div>App 12</div>
+        <div>{{ number + 1 }}</div>
+        <div>{{ ok ? 'YES' : 'NO' }}</div>
+        <div>{{ message.split('').reverse().join('') }}</div>
+    </div>
+    <hr>
+    <div id="app-13">
+        <div>App 13</div>
+        <p v-if="seen">Now you see me</p>
+    </div>
+    <hr>
+    <div id="app-14">
+        <div>App 14</div>
+        <p v-if="seen">Now you see me</p>
+        <a v-bind:href="url"> ... </a>
+        <!--TODO: implement doSomething-->
+        <a v-on:click="doSomething"> ... </a>
+    </div>
+    <hr>
+    <div id="app-15">
+        <div>App 15</div>
+        <form v-on:submit.prevent="onSubmit"> ... </form>
+    </div>
+    <hr>
+    <div id="app-16">
+        <div>App 16</div>
+        <!-- full syntax -->
+        <a v-bind:href="url"> with full syntax </a>
+        <br>
+        <!-- shorthand -->
+        <a :href="url"> with shorthand </a>
+        <br>
+        <!-- full syntax -->
+        <a v-on:click="doSomething"> full syntax </a>
+        <br>
+        <!-- shorthand -->
+        <a @click="doSomething"> shorthand </a>
+    </div>
+    <hr>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
